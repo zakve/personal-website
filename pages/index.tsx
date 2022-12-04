@@ -72,7 +72,7 @@ const Home: NextPage = () => {
                         <Spacer y={1} />
                         <div>
                           {
-                            service.badges?.map((badge) => <Badge color="primary" variant="flat">{badge}</Badge>)
+                            service.badges?.map((badge, i) => <Badge key={i} color="primary" variant="flat">{badge}</Badge>)
                           }
                         </div>
                         <Spacer y={1} />
