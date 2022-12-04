@@ -121,18 +121,6 @@
   text-align: center;
 }
 
-.services h2::after {
-  background: #76bd1d;
-  bottom: 0;
-  content: "";
-  height: 2px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  width: 50px;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -141,13 +129,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
