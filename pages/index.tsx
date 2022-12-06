@@ -7,7 +7,7 @@ import { services } from '../data/services'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer';
 import Title from '../components/Title';
-import ListItem from '../components/ListItem';
+import ServiceCard from '../components/ServiceCard';
 
 const Home: NextPage = () => {
   return (
@@ -38,54 +38,12 @@ const Home: NextPage = () => {
             {
               services?.map((service, i) =>
                 <Grid xs={12} sm={4} key={i}>
-                  <Card>
-                    <Card.Header>
-                      <Col>
-                        <Text h4>
-                          {service.title}
-                        </Text>
-                      </Col>
-                    </Card.Header>
-                    <Card.Image
-                      src={service.img}
-                      objectFit="cover"
-                      width="100%"
-                      height={240}
-                      alt="Service image background"
-                    />
-                    <Card.Footer
-                    // isBlurred
-                    // css={{
-                    //   position: "absolute",
-                    //   bgBlur: "#ffffff66",
-                    //   borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
-                    //   bottom: 0,
-                    //   zIndex: 1,
-                    // }}
-                    >
-                      <Col>
-                        <ul>
-                          {
-                            service.description?.map((point, i) => <ListItem key={i} text={point} />)
-                          }
-                        </ul>
-                        <Spacer y={1} />
-                        <div>
-                          {
-                            service.badges?.map((badge, i) => <Badge key={i} color="primary" variant="flat">{badge}</Badge>)
-                          }
-                        </div>
-                        <Spacer y={1} />
-                        <Button auto ghost color="gradient" size="lg" css={{ margin: 'auto', width: "100%" }}>
-                          <Text
-                            transform="uppercase"
-                          >
-                            portfolio
-                          </Text>
-                        </Button>
-                      </Col>
-                    </Card.Footer>
-                  </Card>
+                  <ServiceCard
+                    title={service.title}
+                    img={service.img}
+                    description={service.description}
+                    badges={service.badges}
+                  />
                 </Grid>)
             }
           </Grid.Container>
