@@ -10,6 +10,13 @@ import Title from '../components/Title';
 import ServiceCard from '../components/ServiceCard';
 
 const Home: NextPage = () => {
+  const scrollToLocation = (hash: string) => {
+    const element = document.getElementById(hash);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,17 +27,19 @@ const Home: NextPage = () => {
 
       <main>
         <nav>
-          <Navbar shouldHideOnScroll>
+          <Navbar>
             <Navbar.Content hideIn="xs">
-              <Navbar.Link href="#">Home</Navbar.Link>
-              <Navbar.Link isActive href="#">Services</Navbar.Link>
-              <Navbar.Link href="#">Portfolio</Navbar.Link>
-              <Navbar.Link href="#">Hire me</Navbar.Link>
+              <Navbar.Link isActive href="#home" onPress={() => scrollToLocation('#home')}>Home</Navbar.Link>
+              <Navbar.Link href="#services" onPress={() => scrollToLocation('#services')}>Services</Navbar.Link>
+              <Navbar.Link href="#portfolio" onPress={() => scrollToLocation('#portfolio')}>Portfolio</Navbar.Link>
+              <Navbar.Link href="#contact" onPress={() => scrollToLocation('#contact')}>Hire me</Navbar.Link>
             </Navbar.Content>
           </Navbar>
         </nav>
-        <Hero />
-        <section>
+        <section id='#home'>
+          <Hero />
+        </section>
+        <section id='#services'>
           <Title text="How can I help you?" />
           <Grid.Container gap={2} justify="center">
             {
@@ -46,10 +55,13 @@ const Home: NextPage = () => {
             }
           </Grid.Container>
         </section>
-        <section>
+        <section id='#portfolio'>
           <Title text="Portfolio" />
           <Grid.Container gap={2} justify="center">
           </Grid.Container>
+        </section>
+        <section id='#contact'>
+          <Title text="Contact me" />
         </section>
       </main>
 
