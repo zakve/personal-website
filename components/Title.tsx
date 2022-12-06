@@ -20,7 +20,11 @@ const Title = ({ text }: Props) => {
           position: "absolute",
           right: 0,
           width: "50px"
-        }
+        },
+        fontSize: '32px',
+        padding: '0 15px 36px',
+        position: 'relative',
+        textAlign: 'center',
       }}
     >
       {text}

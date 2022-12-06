@@ -30,9 +30,7 @@ const Home: NextPage = () => {
           </Navbar>
         </nav>
         <Hero />
-        <section
-          className={styles.services}
-        >
+        <section>
           <Title text="How can I help you?" />
           <Grid.Container gap={2} justify="center">
             {
@@ -49,7 +47,9 @@ const Home: NextPage = () => {
           </Grid.Container>
         </section>
         <section>
-
+          <Title text="Portfolio" />
+          <Grid.Container gap={2} justify="center">
+          </Grid.Container>
         </section>
       </main>
 

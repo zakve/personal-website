@@ -114,13 +114,6 @@
   height: 80%;
 }
 
-.services h2 {
-  font-size: 32px;
-  padding: 0 15px 36px;
-  position: relative;
-  text-align: center;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;
