@@ -11,7 +11,7 @@ const Portfolio = ({ }: Props) => {
       {
         portfolioData?.map((project, i) => {
           return (
-            <Grid sm={3} xs={12} key={i}>
+            <Grid xs={12} sm={4} lg={3} key={i}>
               <PortfolioCard title={project.title} subtitle={project.subtitle} img={project.img} />
             </Grid>
           )

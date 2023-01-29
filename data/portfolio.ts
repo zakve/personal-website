@@ -1,8 +1,10 @@
 import tomtitapp from '../assets/screenshots/tomtitapp.png'
+import currencyConverter from '../assets/screenshots/currency-converter.jpg'
 import idApp from '../assets/screenshots/id-app.png'
 import productProvenance from '../assets/screenshots/product-provenance-2.png'
 import domafin from '../assets/screenshots/domafin-2.png'
 import invoiceGenerator from '../assets/screenshots/invoice-generator.png'
+import eshop from '../assets/screenshots/eshop.jpg'
 import projectManagement from '../assets/screenshots/project-management.png'
 import cil from '../assets/screenshots/cil.jpg'
 import norigin from '../assets/screenshots/norigin.png'
@@ -24,6 +26,11 @@ export const portfolioData = [
         img: tomtitapp?.src,
     },
     {
+        title: "Currency Converter",
+        subtitle: "Web",
+        img: currencyConverter?.src,
+    },
+    {
         title: "ID App",
         subtitle: "Mobile app",
         img: idApp.src,
@@ -34,7 +41,7 @@ export const portfolioData = [
         img: productProvenance.src,
     },
     {
-        title: "Norigin",
+        title: "Norigin Media",
         subtitle: "UX / UI Design",
         img: norigin.src,
     },
@@ -47,6 +54,11 @@ export const portfolioData = [
         title: "Invoice generator",
         subtitle: "Web app",
         img: invoiceGenerator.src,
+    },
+    {
+        title: "Eshop",
+        subtitle: "Mobile app",
+        img: eshop.src,
     },
     {
         title: "Project Management",

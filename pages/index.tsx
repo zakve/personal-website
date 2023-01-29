@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Card, Text, Navbar, Col, Grid, Badge, Button, Spacer } from "@nextui-org/react";
+import { Navbar, Grid } from "@nextui-org/react";
 
 import Hero from './hero'
 import { services } from '../data/services'

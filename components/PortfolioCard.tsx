@@ -31,10 +31,10 @@ const PortfolioCard = ({ title, subtitle, img }: PortfolioProps) => {
                 }}
             >
                 <Col>
-                    <Text h4 color="#000">
+                    <Text h4 color="#1d1d1d">
                         {title}
                     </Text>
-                    <Text size={12} weight="bold" transform="uppercase" color="#151515aa">
+                    <Text size={12} weight="bold" transform="uppercase" color="#2f2f2faa">
                         {subtitle}
                     </Text>
                 </Col>
