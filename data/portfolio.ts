@@ -116,7 +116,7 @@ export const portfolioData = [
         img: grafika.src,
     },
     {
-        title: "FCB Lev",
+        title: "FBC Lev",
         subtitle: "Design",
         img: fcblev.src,
     },
