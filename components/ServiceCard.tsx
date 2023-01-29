@@ -9,6 +9,14 @@ type ServiceProps = {
 }
 
 const ServiceCard = ({ title, img, description, badges }: ServiceProps) => {
+
+    const scrollToContact = () => {
+        const element = document.getElementById('#contact');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <Card>
             <Card.Header>
@@ -40,7 +48,14 @@ const ServiceCard = ({ title, img, description, badges }: ServiceProps) => {
                     }
                 </div>
                 <Spacer y={1} />
-                <Button auto ghost color="gradient" size="lg" css={{ margin: 'auto' }}>
+                <Button
+                    auto
+                    ghost
+                    color="gradient"
+                    size="lg"
+                    css={{ margin: 'auto' }}
+                    onPress={scrollToContact}
+                >
                     <Text
                         transform="uppercase"
                     >
