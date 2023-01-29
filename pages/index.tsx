@@ -8,8 +8,10 @@ import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer';
 import Title from '../components/Title';
 import ServiceCard from '../components/ServiceCard';
+import Portfolio from './Portfolio';
 
 const Home: NextPage = () => {
+
   const scrollToLocation = (hash: string) => {
     const element = document.getElementById(hash);
     if (element) {
@@ -58,6 +60,7 @@ const Home: NextPage = () => {
         <section id='#portfolio'>
           <Title text="Portfolio" />
           <Grid.Container gap={2} justify="center">
+            <Portfolio />
           </Grid.Container>
         </section>
         <section id='#contact'>
