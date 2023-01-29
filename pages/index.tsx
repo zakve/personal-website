@@ -59,9 +59,7 @@ const Home: NextPage = () => {
         </section>
         <section id='#portfolio'>
           <Title text="Portfolio" />
-          <Grid.Container gap={2} justify="center">
-            <Portfolio />
-          </Grid.Container>
+          <Portfolio />
         </section>
         <section id='#contact'>
           <Title text="Contact me" />
