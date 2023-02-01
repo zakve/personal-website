@@ -5,7 +5,7 @@ import martin from '../assets/images/martinzaklasnik.png'
 import GithubLogo from '../assets/icons/github.png'
 import LinkedInLogo from '../assets/icons/linkedin.png'
 
-const Contact: NextPage = () => {
+const ContactPage: NextPage = () => {
   return (
     <Container
       css={{
@@ -62,4 +62,4 @@ const Contact: NextPage = () => {
   )
 }
 
-export default Contact
+export default ContactPage

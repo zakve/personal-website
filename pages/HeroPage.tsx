@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 
 import styles from '../styles/Home.module.css'
 
-const Hero: NextPage = () => {
+const HeroPage: NextPage = () => {
   return (
     <div
       className={styles.hero}
@@ -12,4 +12,4 @@ const Hero: NextPage = () => {
   )
 }
 
-export default Hero
+export default HeroPage

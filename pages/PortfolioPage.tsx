@@ -5,7 +5,7 @@ import { portfolioData } from '../data/portfolio'
 type Props = {
 }
 
-const Portfolio = ({ }: Props) => {
+const PortfolioPage = ({ }: Props) => {
   return (
     <Grid.Container gap={2} justify="center">
       {
@@ -21,4 +21,4 @@ const Portfolio = ({ }: Props) => {
   )
 }
 
-export default Portfolio
+export default PortfolioPage

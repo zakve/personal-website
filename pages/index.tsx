@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Navbar, Grid } from "@nextui-org/react";
+import { Navbar } from "@nextui-org/react";
 
-import Hero from './hero'
-import Portfolio from './portfolio';
-import Contact from './contact';
-import { services } from '../data/services'
+import Hero from './HeroPage'
+import Services from './ServicesPage';
+import Portfolio from './PortfolioPage';
+import Contact from './ContactPage';
+
 import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer';
 import Title from '../components/Title';
-import ServiceCard from '../components/ServiceCard';
 
 const Home: NextPage = () => {
 
@@ -44,19 +44,7 @@ const Home: NextPage = () => {
         </section>
         <section id='#services'>
           <Title text="How can I help you?" />
-          <Grid.Container gap={2} justify="center">
-            {
-              services?.map((service, i) =>
-                <Grid xs={12} sm={4} key={i}>
-                  <ServiceCard
-                    title={service.title}
-                    img={service.img}
-                    description={service.description}
-                    badges={service.badges}
-                  />
-                </Grid>)
-            }
-          </Grid.Container>
+          <Services />
         </section>
         <section id='#portfolio'>
           <Title text="Portfolio" />
