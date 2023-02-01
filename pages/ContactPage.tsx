@@ -49,7 +49,12 @@ const ContactPage: NextPage = () => {
           target='_blank'
           rel="noopener noreferrer"
         >
-          <Image src={LinkedInLogo.src} width={24} height={24} />
+          <Image
+            src={LinkedInLogo.src}
+            width={24}
+            height={24}
+            alt="LinkednIn"
+          />
         </Link>
         <Spacer x={1} />
         <Link
@@ -57,7 +62,12 @@ const ContactPage: NextPage = () => {
           target='_blank'
           rel="noopener noreferrer"
         >
-          <Image src={GithubLogo.src} width={24} height={24} />
+          <Image
+            src={GithubLogo.src}
+            width={24}
+            height={24}
+            alt="GitHub"
+          />
         </Link>
       </Row>
     </Container>

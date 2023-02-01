@@ -30,7 +30,7 @@ const HeroPage: NextPage = () => {
                 textGradient: "45deg, $pink600 -20%, $blue600 50%",
               }}
             >
-              Hi, I'm Martin
+              Hi, I&apos;m Martin
             </Text>
             <Text h2>
               I am a creative person with over 7 years of design and programming experience who enjoys discovering and learning new things.
