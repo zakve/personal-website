@@ -1,4 +1,4 @@
-import { Container, Image, Row, Spacer, Text } from '@nextui-org/react'
+import { Container, Image, Row, Spacer, Text, Link } from '@nextui-org/react'
 import type { NextPage } from 'next'
 
 import martin from '../assets/images/martinzaklasnik.png'
@@ -44,19 +44,21 @@ const ContactPage: NextPage = () => {
       <Row
         justify='center'
       >
-        <a
+        <Link
           href="https://www.linkedin.com/in/zaklasnikm/"
-          target="_blank"
+          target='_blank'
+          rel="noopener noreferrer"
         >
           <Image src={LinkedInLogo.src} width={24} height={24} />
-        </a>
+        </Link>
         <Spacer x={1} />
-        <a
+        <Link
           href="https://github.com/zakve"
-          target="_blank"
+          target='_blank'
+          rel="noopener noreferrer"
         >
           <Image src={GithubLogo.src} width={24} height={24} />
-        </a>
+        </Link>
       </Row>
     </Container>
   )
