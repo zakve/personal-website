@@ -1,5 +1,6 @@
 import { Card, Text, Col, Badge, Button, Spacer } from "@nextui-org/react";
 import ListItem from '../components/ListItem';
+import { scrollToContact } from "../utils/utils";
 
 type ServiceProps = {
     title: string;
@@ -9,13 +10,6 @@ type ServiceProps = {
 }
 
 const ServiceCard = ({ title, img, description, badges }: ServiceProps) => {
-
-    const scrollToContact = () => {
-        const element = document.getElementById('#contact');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     return (
         <Card>
