@@ -3,12 +3,13 @@ import Head from 'next/head'
 import { Navbar, Grid } from "@nextui-org/react";
 
 import Hero from './hero'
+import Portfolio from './portfolio';
+import Contact from './contact';
 import { services } from '../data/services'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer';
 import Title from '../components/Title';
 import ServiceCard from '../components/ServiceCard';
-import Portfolio from './Portfolio';
 
 const Home: NextPage = () => {
 
@@ -63,10 +64,12 @@ const Home: NextPage = () => {
         </section>
         <section id='#contact'>
           <Title text="Contact me" />
+          <Contact />
         </section>
       </main>
-
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

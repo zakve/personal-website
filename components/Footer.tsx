@@ -1,10 +1,20 @@
-import styles from '../styles/Home.module.css'
+import { Container, Text } from '@nextui-org/react'
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <span> Martin Zaklasnik | {new Date().getFullYear()}</span>
-    </footer>
+    <Container
+      css={{
+        padding: "20px 0",
+        borderTop: "1px solid #eaeaea",
+        textAlign: 'center'
+      }}
+    >
+      <Text
+        css={{
+
+        }}
+      > Martin Zaklasnik | {new Date().getFullYear()}</Text>
+    </Container >
   )
 }
 
