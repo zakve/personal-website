@@ -1,7 +1,9 @@
+import MobileAppSrc from '@/public/images/mobile-app.avif'
+
 export const services = [
     {
         title: "Mobile apps",
-        img: "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        img: MobileAppSrc,
         description: ["Custom mobile app development", "Available on Google play and Apple store", "Low maintenance cost"],
         badges: ["React Native", "Android", "iOS", "REST"]
     },

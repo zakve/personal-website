@@ -1,35 +1,7 @@
-import type { NextPage } from 'next'
-import { Text } from "@nextui-org/react";
-
-type Props = {
-  text: string
+export default function Title({ children }: { children: React.ReactNode }) {
+    return (
+        <h2 className="mt-10 mb-6 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors">
+            {children}
+        </h2>
+    )
 }
-
-const Title = ({ text }: Props) => {
-  return (
-    <Text
-      h2
-      css={{
-        '&::after': {
-          background: '$primary',
-          bottom: 0,
-          content: "",
-          height: '2px',
-          left: 0,
-          margin: "auto",
-          position: "absolute",
-          right: 0,
-          width: "50px"
-        },
-        fontSize: '32px',
-        padding: '70px 15px 36px',
-        position: 'relative',
-        textAlign: 'center',
-      }}
-    >
-      {text}
-    </Text>
-  )
-}
-
-export default Title

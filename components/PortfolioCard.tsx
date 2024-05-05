@@ -1,4 +1,6 @@
-import { Card, Text, Col } from "@nextui-org/react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import Image from "next/image";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 
 type PortfolioProps = {
     title: string;
@@ -8,38 +10,49 @@ type PortfolioProps = {
 
 const PortfolioCard = ({ title, subtitle, img }: PortfolioProps) => {
     return (
-        <Card css={{ w: "100%" }}>
-            <Card.Image
-                src={img}
-                width="100%"
-                height={340}
-                objectFit="cover"
-                alt={title}
-                css={{
-                    objectPosition: "top",
-                    backgroundColor: '#fff',
-                }}
-            />
-            <Card.Footer
-                isBlurred
-                css={{
-                    position: "absolute",
-                    bgBlur: "#ffffff66",
-                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.6)",
-                    bottom: 0,
-                    zIndex: 1,
-                }}
-            >
-                <Col>
-                    <Text h4 color="#1d1d1d">
-                        {title}
-                    </Text>
-                    <Text size={12} weight="bold" transform="uppercase" color="#2f2f2faa">
+        <Dialog>
+            <DialogTrigger asChild>
+                <Card className="cursor-pointer hover:scale-105 object-cover transition-all">
+                    <CardContent className='px-0'>
+                        <div className='relative min-h-40'>
+                            <Image src={img}
+                                objectFit="cover"
+                                alt="Service image background"
+                                className='h-full w-full'
+                                fill
+                            />
+                        </div>
+                    </CardContent>
+                    <CardFooter className="flex flex-col justify-start">
+                        <div>
+                            {title}
+                        </div>
+                        <div>
+                            {subtitle}
+                        </div>
+                    </CardFooter>
+                </Card>
+            </DialogTrigger>
+            <DialogContent className="">
+                <DialogHeader>
+                    <DialogTitle>{title}</DialogTitle>
+                    <DialogDescription>
                         {subtitle}
-                    </Text>
-                </Col>
-            </Card.Footer>
-        </Card>
+                    </DialogDescription>
+                </DialogHeader>
+                <div className='relative min-h-80'>
+                    <Image src={img}
+                        objectFit="contain"
+                        alt="Service image background"
+                        className='h-full w-full'
+                        fill
+                    />
+                </div>
+                <DialogFooter>
+                </DialogFooter>
+            </DialogContent>
+        </Dialog>
+
     )
 }
 

@@ -1,5 +1,4 @@
-import { Grid } from "@nextui-org/react";
-import PortfolioCard from "../components/PortfolioCard";
+import PortfolioCard from '@/components/PortfolioCard'
 import { portfolioData } from '../data/portfolio'
 
 type Props = {
@@ -7,17 +6,17 @@ type Props = {
 
 const PortfolioPage = ({ }: Props) => {
   return (
-    <Grid.Container gap={2} justify="center">
+    <div className='grid gap-6 sm:grid-cols-3 md:grid-cols-4 mb-20'>
       {
         portfolioData?.map((project, i) => {
           return (
-            <Grid xs={12} sm={4} lg={3} key={i}>
+            <div className='' key={i}>
               <PortfolioCard title={project.title} subtitle={project.subtitle} img={project.img} />
-            </Grid>
+            </div>
           )
         })
       }
-    </Grid.Container>
+    </div>
   )
 }
 
