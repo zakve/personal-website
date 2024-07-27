@@ -15,6 +15,6 @@ https://martin-zaklasnik.vercel.app/
 ```
 git clone https://github.com/zakve/personal-website.git
 cd personal-website
-pnpm
+pnpm i
 pnpm dev
 ```

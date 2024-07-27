@@ -6,7 +6,7 @@ type Props = {
 
 const PortfolioPage = ({ }: Props) => {
   return (
-    <div className='grid gap-6 sm:grid-cols-3 md:grid-cols-4 mb-20'>
+    <div className='grid gap-6 sm:grid-cols-3 md:grid-cols-4'>
       {
         portfolioData?.map((project, i) => {
           return (

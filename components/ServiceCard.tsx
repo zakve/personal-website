@@ -24,9 +24,8 @@ const ServiceCard = ({ title, img, description, badges }: ServiceProps) => {
             <CardContent className='px-0'>
                 <div className='relative min-h-40'>
                     <Image src={img}
-                        objectFit="cover"
                         alt="Service image background"
-                        className='h-full w-full'
+                        className='h-full w-full object-cover'
                         fill
                     />
                 </div>
@@ -45,9 +44,9 @@ const ServiceCard = ({ title, img, description, badges }: ServiceProps) => {
                     </div>
                 </div>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-center">
                 <Button
-                    variant='outline'
+                    variant='secondary'
                     size="lg"
                     onClick={scrollToContact}
                 >

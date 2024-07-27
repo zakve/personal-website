@@ -13,22 +13,22 @@ export default function Home() {
       <nav>
         <Navbar />
       </nav>
-      <section id="#home" className="flex items-center justify-center">
+      <section id="home" className="flex items-center justify-center">
         <HeroPage />
       </section>
-      <section id="#services" className="text-center">
+      <section id="services" className="text-center">
         <Title>
           <div>How can I help you?</div>
         </Title>
         <ServicesPage />
       </section>
-      <section id="#portfolio" className="text-center">
+      <section id="portfolio" className="text-center">
         <Title>
           <div>Portfolio</div>
         </Title>
         <PortfolioPage />
       </section>
-      <section id="#contact" className="text-center">
+      <section id="contact" className="text-center">
         <Title>
           <div>Contact</div>
         </Title>

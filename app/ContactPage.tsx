@@ -15,7 +15,7 @@ const ContactPage: NextPage = () => {
           height={100}
           src={martin.src}
           alt="profile picture"
-          objectFit="cover"
+          className='object-cover'
         />
       </div>
       <p className='pt-2'>

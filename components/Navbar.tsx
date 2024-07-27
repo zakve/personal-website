@@ -12,7 +12,7 @@ export default function Navbar() {
                 <Link href='#services'>
                     <Button variant='ghost'>Services</Button>
                 </Link>
-                <Link href='#portfolio'>
+                <Link href='#portfolio' >
                     <Button variant='ghost'>Portfolio</Button>
                 </Link>
                 <Link href='#contact'>

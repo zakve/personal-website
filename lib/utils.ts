@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const scrollToContact = () => {
-  const element = document.getElementById('#contact');
+  const element = document.getElementById('contact');
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }

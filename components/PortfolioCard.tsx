@@ -16,10 +16,9 @@ const PortfolioCard = ({ title, subtitle, img }: PortfolioProps) => {
                     <CardContent className='px-0'>
                         <div className='relative min-h-40'>
                             <Image src={img}
-                                objectFit="cover"
                                 alt="Service image background"
-                                className='h-full w-full'
-                                fill
+                                className='h-full w-full object-cover'
+                                fill={true}
                             />
                         </div>
                     </CardContent>
@@ -33,7 +32,7 @@ const PortfolioCard = ({ title, subtitle, img }: PortfolioProps) => {
                     </CardFooter>
                 </Card>
             </DialogTrigger>
-            <DialogContent className="">
+            <DialogContent className="min-w-[90%] min-h-[90%]">
                 <DialogHeader>
                     <DialogTitle>{title}</DialogTitle>
                     <DialogDescription>
@@ -42,9 +41,8 @@ const PortfolioCard = ({ title, subtitle, img }: PortfolioProps) => {
                 </DialogHeader>
                 <div className='relative min-h-80'>
                     <Image src={img}
-                        objectFit="contain"
                         alt="Service image background"
-                        className='h-full w-full'
+                        className='h-full w-full object-contain'
                         fill
                     />
                 </div>
