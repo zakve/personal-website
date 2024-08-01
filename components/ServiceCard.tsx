@@ -1,62 +1,58 @@
-import { Card, Text, Col, Badge, Button, Spacer } from "@nextui-org/react";
-import ListItem from '../components/ListItem';
-import { scrollToContact } from "../utils/utils";
+'use client'
+
+import { scrollToContact } from "@/lib/utils";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card';
+import Image, { StaticImageData } from 'next/image'
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 type ServiceProps = {
     title: string;
-    img: string;
+    img: string | StaticImageData;
     description: string[];
     badges: string[];
 }
 
 const ServiceCard = ({ title, img, description, badges }: ServiceProps) => {
-
     return (
         <Card>
-            <Card.Header>
-                <Col>
-                    <Text h4>
-                        {title}
-                    </Text>
-                </Col>
-            </Card.Header>
-            <Card.Image
-                src={img}
-                objectFit="cover"
-                width="100%"
-                height={240}
-                alt="Service image background"
-            />
-            <Card.Footer
-                css={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}
-            >
-                <ul>
-                    {
-                        description?.map((point, i) => <ListItem key={i} text={point} />)
-                    }
-                </ul>
-                <Spacer y={1} />
-                <div>
-                    {
-                        badges?.map((badge, i) => <Badge key={i} color="primary" variant="flat">{badge}</Badge>)
-                    }
+            <CardHeader>
+                <CardTitle>
+                    {title}
+                </CardTitle>
+            </CardHeader>
+            <CardContent className='px-0'>
+                <div className='relative min-h-40'>
+                    <Image src={img}
+                        alt="Service image background"
+                        className='h-full w-full object-cover'
+                        fill
+                    />
                 </div>
-                <Spacer y={1} />
+                <div className='px-8 pt-7 pb-3 text-left'>
+                    <div className='pb-3'>
+                        <ul className="list-disc">
+                            {
+                                description?.map((point, i) => <li key={i}>{point}</li>)
+                            }
+                        </ul>
+                    </div>
+                    <div className="">
+                        {
+                            badges?.map((badge, i) => <Badge className="mr-2 mb-2" key={i} color="primary" variant='secondary'>{badge}</Badge>)
+                        }
+                    </div>
+                </div>
+            </CardContent>
+            <CardFooter className="flex justify-center">
                 <Button
-                    auto
-                    ghost
-                    color="gradient"
+                    variant='secondary'
                     size="lg"
-                    css={{ margin: 'auto' }}
-                    onPress={scrollToContact}
+                    onClick={scrollToContact}
                 >
-                    <Text
-                        transform="uppercase"
-                    >
-                        Contact me
-                    </Text>
+                    Contact me
                 </Button>
-            </Card.Footer>
+            </CardFooter>
         </Card>
     )
 }

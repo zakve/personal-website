@@ -1,9 +1,9 @@
 # Personal website
 
 ## Stack/Features
-> - React, NextJs
+> - React, NextJs 14 (App router)
 > - Typescript
-> - Next UI
+> - Tailwind + Shadcn
 > - Vercel Automatic Deployment
 
 ## Live Demo
@@ -15,6 +15,6 @@ https://martin-zaklasnik.vercel.app/
 ```
 git clone https://github.com/zakve/personal-website.git
 cd personal-website
-yarn
-yarn run dev
+pnpm i
+pnpm dev
 ```
