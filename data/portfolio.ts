@@ -18,14 +18,14 @@ import selitech from "@/public/screenshots/selitech.jpg";
 import vutLetak from "@/public/screenshots/vut-letak.png";
 import grafika from "@/public/screenshots/grafika.png";
 import fcblev from "@/public/screenshots/fcblev.png";
-import fintokei from "@/public/screenshots/fintokei-dashboard.png";
+import clientZone from "@/public/screenshots/clientZone-dashboard.png";
 import zone from "@/public/screenshots/purple-zone.png";
 
 export const portfolioData = [
   {
-    title: "Fintokei",
+    title: "Client Zone",
     subtitle: "Web app",
-    img: fintokei?.src,
+    img: clientZone?.src,
   },
   {
     title: "Purple Zone",
